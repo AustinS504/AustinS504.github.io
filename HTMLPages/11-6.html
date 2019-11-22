@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="pokemon-style.css">
+    <link rel="stylesheet" href="pokemon-types.css">
+    <link rel="stylesheet" href="pokemon-search-style.css">
+    
+    
+<script>
+    let pokeTeam;
+    let cardContainer;
+    let cards;
+    
+    function filterResults(){
+        let inputElement = document.getElementById("searchInput");
+        let searchValue = inputElement.value.toUpperCase();
+        
+        let pokemon = document.getElementsByClassName("pokemon-card");
+        
+        for(i = 0; i < pokemon.length; 1++){
+            let pokeText = pokemon[i].textContent;
+            
+            if(pokeText.toUpperCase().indexOf(searchValue) > -1) {
+                pokemon[i].style.display= "";
+            }
+            else{
+                pokemon[i].style.display = "none";
+            }
+        }
+    }
+    </script>
+    
+    
+    
+    s
+    <style>
+        body > div{
+            max-width: 300px;
+            margin: auto;
+        }
+        ::placeholder{
+            color: white;
+        }
+        #searchinput{
+            width: 100%;
+            padding: 10px 5px 10px 5px;
+            border: none;
+            background-color: rgba(0,0,0,0.2);
+            color: white;
+            font-family: 'roboto';
+            font-size: 15px;
+        }
+        .grass{
+            background-color: #DEFDE0;
+        }
+        .fire{
+            background-color: #FDDFDF;
+        }
+        .electric{
+            background-color: lightgoldenrodyellow;
+        }
+        .water{
+            background-color: #DEF3FD;
+        }
+         .ground{
+            background-color: #f4e7da;
+        }
+         .rock{
+            background-color: #d5d5d4;
+        }
+         .poison{
+            background-color: #b19cd9;
+        }
+         .bug{
+            background-color: #f8d5a3;
+        }
+         .dragon{
+            background-color: #97b3e6;
+        }
+         .psychic{
+            background-color: #eaeda1;
+        }
+         .flying{
+            background-color: #F5F5F5;
+        }
+         .fighting{
+            background-color: #E6E0D4;
+        }
+         .normal{
+            background-color: #F5F5F5;
+        }
+         .ice{
+            background-color: #66ccff;
+        }
+        .name{
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .pokemon-card{
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            margin-left: 10px;
+            margin-top: 10px;
+            height: 212px;
+            width: 120px;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 10px;
+        }
+        .img-container{
+            margin-top: 30px;
+            background-color: rgba(255,255,255,0.6)
+        }
+        .number{
+            font-size: 5px rgba(0,0,0,0.1);
+            padding: 5px, 10px, 5px, 10px;
+        }
+        section{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #img{
+            width: 150px;
+        }
+        #grass{
+            background-color: #DEFDE0;
+        }
+        #fire{
+            background-color: #FDDFDF;
+        }
+        #water{
+           background-color: #DEF3FD; 
+        }
+        #bug{
+            background-color: #f8d5a3;
+        }
+        #poison{
+            background-color: #b19cd9;
+        }
+         #ice{
+            background-color: #66ccff;
+        }
+         #normal{
+            background-color: #F5F5F5;
+        }
+         #fighting{
+            background-color: #E6E0D4;
+        }
+          #flying{
+            background-color: #F5F5F5;
+        }
+          #psychic{
+            background-color: #eaeda1;
+        }
+         #dragon{
+            background-color: #97b3e6;
+        }
+        #rock{
+            background-color: #d5d5d4;
+        }
+          #ground{
+            background-color: #f4e7da;
+        }
+        #electric{
+            background-color: lightgoldenrodyellow;;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+    
+    Pokemon Search
+        
+    </h1>
+    <div>
+    
+        <input type="text" id="searchinput" onkeyup="filterResults()" placeholder="Search for pokemon name or type.">
+    </div>
+    
+    <section>
+            <div class="pokemon-card" id="grass">
+        <div class="img-container">
+                <img src="1-bulbasaur-grass.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #001
+                </div>
+                
+                <div class="name">
+                    Bulbasaur
+                </div>
+                
+                <div class="type">
+                    grass
+                </div>
+        </div>
+        
+        
+             <div class="pokemon-card" id="grass">
+        <div class="img-container">
+                <img src="2-ivsaur-grass.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #002
+                </div>
+                
+                <div class="name">
+                    Ivsaur
+                </div>
+                
+                <div class="type">
+                    grass
+                </div>
+        </div>
+        
+             <div class="pokemon-card" id="grass">
+        <div class="img-container">
+                <img src="3-venusaur-grass.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #003
+                </div>
+                
+                <div class="name">
+                    Venusaur
+                </div>
+                
+                <div class="type">
+                    grass
+                </div>
+        </div>
+        
+        
+             <div class="pokemon-card" id="fire">
+        <div class="img-container">
+                <img src="4-charmander-fire.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #004
+                </div>
+                
+                <div class="name">
+                    Charmander
+                </div>
+                
+                <div class="type">
+                    fire
+                </div>
+        </div>
+        
+        
+             <div class="pokemon-card" id="fire">
+        <div class="img-container">
+                <img src="5-charmeleon-fire.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #005
+                </div>
+                
+                <div class="name">
+                    Charmeleon
+                </div>
+                
+                <div class="type">
+                    fire
+                </div>
+        </div>
+        
+        
+             <div class="pokemon-card" id="fire">
+        <div class="img-container">
+                <img src="6-charizard-fire.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #006
+                </div>
+                
+                <div class="name">
+                    Charizard
+                </div>
+                
+                <div class="type">
+                    fire
+                </div>
+        </div>
+        
+        
+             <div class="pokemon-card" id="water">
+        <div class="img-container">
+                <img src="7-squirtle-water.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #007
+                </div>
+                
+                <div class="name">
+                    Squirtle
+                </div>
+                
+                <div class="type">
+                    water
+                </div>
+        </div>
+        
+        
+             <div class="pokemon-card" id="water">
+        <div class="img-container">
+                <img src="8-wartortle-water.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #008
+                </div>
+                
+                <div class="name">
+                    Wartortle
+                </div>
+                
+                <div class="type">
+                    water
+                </div>
+        </div>
+        
+        
+             <div class="pokemon-card" id="water">
+        <div class="img-container">
+                <img src="9-bastoise-water.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #009
+                </div>
+                
+                <div class="name">
+                    Bastoise
+                </div>
+                
+                <div class="type">
+                    water
+                </div>
+        </div>
+        
+        
+                           <div class="pokemon-card" id="normal">
+        <div class="img-container">
+                <img src="19-rattata-normal.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #019
+                </div>
+                
+                <div class="name">
+                    Rattata
+                </div>
+                
+                <div class="type">
+                    normal
+                </div>
+        </div>
+        
+                 <div class="pokemon-card" id="normal">
+        <div class="img-container">
+                <img src="20-raticate-normal.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #020
+                </div>
+                
+                <div class="name">
+                    Raticate
+                </div>
+                
+                <div class="type">
+                    normal
+                </div>
+        </div>
+        
+                 <div class="pokemon-card" id="normal">
+        <div class="img-container">
+                <img src="21-spearow-flying.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #021
+                </div>
+                
+                <div class="name">
+                    Spearow
+                </div>
+                
+                <div class="type">
+                    normal
+                </div>
+        </div>
+        
+             <div class="pokemon-card" id="bug">
+        <div class="img-container">
+                <img src="10-caterpie-bug.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #010
+                </div>
+                
+                <div class="name">
+                    Caterpie
+                </div>
+                
+                <div class="type">
+                    bug
+                </div>
+        </div>
+        
+                  <div class="pokemon-card" id="bug">
+        <div class="img-container">
+                <img src="11-metapod-bug.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #011
+                </div>
+                
+                <div class="name">
+                    Metapod
+                </div>
+                
+                <div class="type">
+                    bug
+                </div>
+        </div>
+        
+                  <div class="pokemon-card" id="bug">
+        <div class="img-container">
+                <img src="12-butterfree-bug.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #012
+                </div>
+                
+                <div class="name">
+                    Caterpie
+                </div>
+                
+                <div class="type">
+                    bug
+                </div>
+        </div>
+        
+ 
+                 <div class="pokemon-card" id="poison">
+        <div class="img-container">
+                <img src="13-weedle-poison.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #013
+                </div>
+                
+                <div class="name">
+                    Weedle
+                </div>
+                
+                <div class="type">
+                    poison
+                </div>
+        </div>
+        
+                 <div class="pokemon-card" id="poison">
+        <div class="img-container">
+                <img src="14-kakuna-poison.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #014
+                </div>
+                
+                <div class="name">
+                    Caterpie
+                </div>
+                
+                <div class="type">
+                    poison
+                </div>
+        </div>
+        
+                 <div class="pokemon-card" id="poison">
+        <div class="img-container">
+                <img src="15-beedril-poison.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #015
+                </div>
+                
+                <div class="name">
+                    Beedril
+                </div>
+                
+                <div class="type">
+                    poison
+                </div>
+        </div>
+        
+        
+                 <div class="pokemon-card" id="flying">
+        <div class="img-container">
+                <img src="16-pidgey-flying.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #016
+                </div>
+                
+                <div class="name">
+                    Pidgey
+                </div>
+                
+                <div class="type">
+                    flying
+                </div>
+        </div>
+        
+                 <div class="pokemon-card" id="flying">
+        <div class="img-container">
+                <img src="17-pidgeotto-flying.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #017
+                </div>
+                
+                <div class="name">
+                    Pidgeotto
+                </div>
+                
+                <div class="type">
+                    flying
+                </div>
+        </div>
+        
+                 <div class="pokemon-card" id="flying">
+        <div class="img-container">
+                <img src="18-pidgeot-flying.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #018
+                </div>
+                
+                <div class="name">
+                    Pidgeot
+                </div>
+                
+                <div class="type">
+                    flying
+                </div>
+        </div>
+        
+                    <div class="pokemon-card" id="electric">
+        <div class="img-container">
+                <img src="25-pikachu-electric.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #025
+                </div>
+                
+                <div class="name">
+                    Pikachu
+                </div>
+                
+                <div class="type">
+                    electric
+                </div>
+        </div>
+        
+                  <div class="pokemon-card" id="electric">
+        <div class="img-container">
+                <img src="26-raichu-electric.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #026
+                </div>
+                
+                <div class="name">
+                    Raichu
+                </div>
+                
+                <div class="type">
+                    electric
+                </div>
+        </div>
+        
+                      <div class="pokemon-card" id="electric">
+        <div class="img-container">
+                <img src="82-magneton-electric.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #082
+                </div>
+                
+                <div class="name">
+                    Magneton
+                </div>
+                
+                <div class="type">
+                    electric
+                </div>
+        </div>
+        
+                      <div class="pokemon-card" id="psychic">
+        <div class="img-container">
+                <img src="63-abra-psychic.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #063
+                </div>
+                
+                <div class="name">
+                    Abra
+                </div>
+                
+                <div class="type">
+                    psychic
+                </div>
+        </div>
+        
+                      <div class="pokemon-card" id="psychic">
+        <div class="img-container">
+                <img src="64-kadabra-psychic.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #064
+                </div>
+                
+                <div class="name">
+                    Kadabra
+                </div>
+                
+                <div class="type">
+                    psychic
+                </div>
+        </div>
+        
+                      <div class="pokemon-card" id="psychic">
+        <div class="img-container">
+                <img src="97-hypno-psychic.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #097
+                </div>
+                
+                <div class="name">
+                    Hypno
+                </div>
+                
+                <div class="type">
+                    psychic
+                </div>
+        </div>
+        
+                      <div class="pokemon-card" id="rock">
+        <div class="img-container">
+                <img src="75-graveler-rock.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #075
+                </div>
+                
+                <div class="name">
+                    Graveler
+                </div>
+                
+                <div class="type">
+                    rock
+                </div>
+        </div>
+        
+                      <div class="pokemon-card" id="rock">
+        <div class="img-container">
+                <img src="76-golem-rock.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #076
+                </div>
+                
+                <div class="name">
+                    Golem
+                </div>
+                
+                <div class="type">
+                    rock
+                </div>
+        </div>
+        
+                      <div class="pokemon-card" id="rock">
+        <div class="img-container">
+                <img src="74-geodude-rock.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #074
+                </div>
+                
+                <div class="name">
+                    Geodude
+                </div>
+                
+                <div class="type">
+                    rock
+                </div>
+        </div>
+        
+        
+                      <div class="pokemon-card" id="ground">
+        <div class="img-container">
+                <img src="27-sandshrew-ground.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #027
+                </div>
+                
+                <div class="name">
+                    Sandshrew
+                </div>
+                
+                <div class="type">
+                    ground
+                </div>
+        </div>
+        
+                     <div class="pokemon-card" id="ground">
+        <div class="img-container">
+                <img src="28-sandslash-ground.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #028
+                </div>
+                
+                <div class="name">
+                    Sandlash
+                </div>
+                
+                <div class="type">
+                    ground
+                </div>
+        </div>
+        
+                     <div class="pokemon-card" id="ground">
+        <div class="img-container">
+                <img src="105-marowak-ground.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #105
+                </div>
+                
+                <div class="name">
+                    Marowak
+                </div>
+                
+                <div class="type">
+                    ground
+                </div>
+        </div>
+        
+                     <div class="pokemon-card" id="ghost">
+        <div class="img-container">
+                <img src="92-gastly-ghost.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #092
+                </div>
+                
+                <div class="name">
+                    Gastly
+                </div>
+                
+                <div class="type">
+                    ghost
+                </div>
+        </div>
+        
+                    <div class="pokemon-card" id="ghost">
+        <div class="img-container">
+                <img src="93-haunter-ghost.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #093
+                </div>
+                
+                <div class="name">
+                    Haunter
+                </div>
+                
+                <div class="type">
+                    ghost
+                </div>
+        </div>
+        
+                    <div class="pokemon-card" id="ghost">
+        <div class="img-container">
+                <img src="94-gengar-ghost.png" id="img">
+                </div>
+                
+                <div class="number">
+                    #094
+                </div>
+                
+                <div class="name">
+                    Gengar
+                </div>
+                
+                <div class="type">
+                    ghost
+                </div>
+        </div>
+    </section>
+</body>
+</html>
